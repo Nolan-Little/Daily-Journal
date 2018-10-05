@@ -1,0 +1,53 @@
+
+/* main journal styles */
+h1 {
+  text-align: center;
+}
+
+/* entry field styles */
+.journal__form {
+  display: block;
+  margin: 0 auto;
+  width: 70vw;
+}
+
+.journal__form--fields {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  width: 70vw;
+  border-radius: 10px;
+}
+
+.form-labelpair {
+  margin: 15px 0 0 0;
+  display: flex ;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 70vw;
+}
+.date-mood-pair {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.date-mood-pair label {
+  margin: 0 7px 0 15px;
+}
+
+.form--textEntry{
+  width: 40vw;
+  height: 80px;
+  margin-bottom: 5px;
+}
+.journal--button {
+  margin: 5px auto;
+}
+input.form--textEntry{
+  width: 20vw;
+  height: 20px;
+  margin-bottom: 5px;
+}
