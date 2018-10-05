@@ -1,7 +1,18 @@
 
 /* main journal styles */
+body {
+  font-family:'Poppins', 'Titillium Web','Kodchasan',Arial, Helvetica, sans-serif;
+  background-color: #EAEFD3;
+}
 h1 {
+  margin: 30px auto;
   text-align: center;
+  font-size: 50px;
+  color:#292a46fd;
+  font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+  border-bottom: solid 3px #292a46fd;
+  width: 325px;
+  border-radius: 30px;
 }
 
 /* entry field styles */
@@ -9,15 +20,30 @@ h1 {
   display: block;
   margin: 0 auto;
   width: 70vw;
+  color:  #EAEFD3;
+  background-color: #292a46fd;
+  border-radius: 10px;
+  padding: 15px;
 }
-
+/* flex container for whole form */
 .journal__form--fields {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
   width: 70vw;
-  border-radius: 10px;
+  border: none;
+  margin: 0 0;
+  padding: 0;
+}
+/* form header */
+
+legend.form--legend {
+  color: #EAEFD3;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .form-labelpair {
@@ -28,14 +54,19 @@ h1 {
   align-items: center;
   width: 70vw;
 }
+/* styling div pair to put smaller inputs in row at top */
 .date-mood-pair {
   margin: 15px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.date-mood-pair select {
+  height: 20.5px;
 }
 
 .date-mood-pair label {
-  margin: 0 7px 0 15px;
+  margin: 0 7px 0 20px;
 }
 
 .form--textEntry{
