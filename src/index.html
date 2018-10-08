@@ -13,7 +13,7 @@
   
   <!-- New journal entry form -->
   
-  <form action="" class="journal__form">
+  <form onsubmit="return false" action="" class="journal__form">
     <fieldset class="journal__form--fields"> 
         <legend class="form--legend">New Entry</legend> 
         <div class="date-mood-pair">
@@ -37,8 +37,12 @@
           <label for="journalEntry">Journal Entry</label>
           <textarea class="form--textEntry" type="textarea" name="journalEntry" id="journalEntry" placeholder="What's up?"></textarea>
         </div>
-        <button class="journal--button">Submit Entry</button>
+        <button  type="submit" class="journal--button" id="journalSubmit">Submit Entry</button>
       </fieldset>
     </form>
+    <div class="print--div" id="printDiv">
+      
+    </div>
+  <script src="scripts/journal.js"></script>
 </body>
 </html>
