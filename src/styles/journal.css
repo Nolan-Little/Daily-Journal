@@ -82,3 +82,35 @@ input.form--textEntry{
   height: 20px;
   margin-bottom: 5px;
 }
+
+/* printed journal entry styles. */
+.print--div {
+  margin: 0 auto;
+  width: 70vw;
+}
+.entryContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: solid 2px #292a46fd;
+  border-radius: 10px;
+  color: #292a46fd;
+  width: 70vw;
+  margin: 20px 0 5px 0;
+  padding-top: 15px;
+}
+
+.entryContainer h3 {
+  font-size: 18px;
+  margin: 0px 0 5px 0;
+  
+}
+
+.entryContainer h4 {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.entryContainer p {
+  padding: 20px;
+}
