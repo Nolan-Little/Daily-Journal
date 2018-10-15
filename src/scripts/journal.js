@@ -1,34 +1,4 @@
-// const entryDate = document.getElementById("journalDate");
-// const entryMood = document.getElementById("journalMood");
-// const entryConcepts = document.getElementById("journalConcepts");
-// const entryText = document.getElementById("journalEntry");
-// const entryButton = document.getElementById('journalSubmit')
 
-// let completeEntries= {
-//   date:"",
-//   mood:"",
-//   concepts:"",
-//   text:""
-// }
-
-// console.log(entryDate);
-// let dateValue = entryDate.value;
-// let moodValue = entryMood.value;
-// let conceptsValue = entryConcepts.value;
-// let textValue = entryText.value;
-// let entryValuesArray = [dateValue, moodValue, conceptsValue, textValue]
-
-
-
-// entryButton.addEventListener("click", () => {
-  //     for(let i = 0; i < entryValuesArray.length; i++) {
-    //       completeEntries.date = entryValuesArray[i]
-    //       completeEntries.mood = entryValuesArray[i]
-    //       completeEntries.concepts = entryValuesArray[i]
-    //       completeEntries.text = entryValuesArray[i]
-    //     }
-    //     return completeEntries;
-    // });
     const printDiv = document.getElementById("printDiv");
     function printEntry(date, mood, concept, entry) {
       let entryContainer = document.createElement('div');
