@@ -10,12 +10,12 @@
 </head>
 <body>
   <h1 class="journal__header">Daily Journal</h1>
-  
+
   <!-- New journal entry form -->
-  
+
   <form onsubmit="return false" action="" class="journal__form">
-    <fieldset class="journal__form--fields"> 
-        <legend class="form--legend">New Entry</legend> 
+    <fieldset class="journal__form--fields">
+        <legend class="form--legend">New Entry</legend>
         <div class="date-mood-pair">
           <label for="journalDate">Date of Entry:</label>
           <input type="date" name="journalDate" id="journalDate">
@@ -27,8 +27,8 @@
             <option value="Sad">Sad</option>
             <option value="Anxious">Anxious</option>
             <option value="Frustrated">Frustrated</option>
-          </select> 
-        </div> 
+          </select>
+        </div>
         <div class="form-labelpair">
           <label for="journalConcepts">Concepts Covered</label>
           <input class="form--textEntry" type="text" name="journalConcepts" id="journalConcepts">
@@ -37,12 +37,18 @@
           <label for="journalEntry">Journal Entry</label>
           <textarea class="form--textEntry" type="textarea" name="journalEntry" id="journalEntry" placeholder="What's up?"></textarea>
         </div>
-        <button  type="submit" class="journal--button" id="journalSubmit">Submit Entry</button>
+
+        <div class="button--container">
+          <button  type="submit" class="journal--button" id="journalSubmit">Submit Entry</button>
+          <button  type="button" class="journal--button" id="journalPrint">Print All Entries</button>
+        </div>
       </fieldset>
     </form>
     <div class="print--div" id="printDiv">
-      
+
     </div>
-  <script src="scripts/journal.js"></script>
+    <script src="scripts/getEntries.js"></script>
+    <script src="scripts/entriesDOM.js"></script>
+    <script src="scripts/printEntries.js"></script>
 </body>
 </html>
