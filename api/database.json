@@ -1,11 +1,18 @@
 {
   "entries": [
     {
-      "id": 1,
       "date": "10/05/18",
       "mood": "Excited",
       "concept": "Grunt",
-      "entry": "Grunt seems pretty slick. Blah, blah, another fetch yadada."
+      "entry": "Grunt seems pretty slick. Blah, blah, another fetch yadada.",
+      "id": 1
+    },
+    {
+      "date": "2018-10-22",
+      "mood": "Excited",
+      "concept": "Posting with fetch.",
+      "entry": "I figured out how to use fetch to post! Im pretty stoked about it. I can actually use this as a journal now if I wanted. When you submit this form is stores all of the current values to my JSON file. Print all Entries prints all of the entries currently stored in the JSON file.",
+      "id": 2
     }
   ]
 }

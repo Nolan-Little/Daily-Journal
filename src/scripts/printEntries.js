@@ -1,12 +1,11 @@
 // target empty div to print entries to
 const printDiv = document.getElementById("printDiv");
-let printButton = document.querySelector("#journalPrint")
 
 // method to print entry which accepts the values to be printed and calls
   // the constructor function to specify the formatting for each value to print.
   // first 2 lines create  a container div so each entry is styled individually.
 
-const createHTML = { 
+const createHTML = {
   printEntry (date, mood, concept, entry) {
   let entryContainer = document.createElement("div");
   entryContainer.className = "entryContainer";
@@ -25,10 +24,6 @@ let printOnClick = (entryArray) => {
   })
 }
 
-printButton.addEventListener("click", () => {
-entryFetcher.fetchEntries()
-.then((readyToPrint) => printOnClick(readyToPrint))
-})
 
 
 
