@@ -12,12 +12,12 @@ function constructElement(element, textNode, value, appendTo) {
   // the constructor function to specify the formatting for each value to print.
   // first 2 lines create  a container div so each entry is styled individually.
 function printEntry(date, mood, concept, entry) {
-  let entryContainer = document.createElement('div');
+  let entryContainer = document.createElement("div");
   entryContainer.className = "entryContainer";
   constructElement("h3", "date:", date, entryContainer)
   constructElement("h3", "mood:", mood, entryContainer)
   constructElement("h4", "Concepts covered:", concept, entryContainer)
-  constructElement("p",'', entry, entryContainer)  
+  constructElement("p","", entry, entryContainer)  
   printDiv.appendChild(entryContainer);
 }
 
