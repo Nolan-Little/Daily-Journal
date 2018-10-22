@@ -1,11 +1,11 @@
 {
-  "entries":[
+  "entries": [
     {
-    "id":1,
-    "date":"10/05/18",
-    "mood":"Excited",
-    "concept":"Grunt",
-    "entry":"Grunt seems pretty slick. Blah, blah, another fetch yadada."
+      "id": 1,
+      "date": "10/05/18",
+      "mood": "Excited",
+      "concept": "Grunt",
+      "entry": "Grunt seems pretty slick. Blah, blah, another fetch yadada."
     }
   ]
 }
