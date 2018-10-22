@@ -75,7 +75,7 @@ legend.form--legend {
   margin-bottom: 5px;
 }
 .journal--button {
-  margin: 5px auto;
+  margin: 5px 10px;
 }
 input.form--textEntry{
   width: 20vw;
@@ -103,7 +103,7 @@ input.form--textEntry{
 .entryContainer h3 {
   font-size: 18px;
   margin: 0px 0 5px 0;
-  
+
 }
 
 .entryContainer h4 {
@@ -114,3 +114,9 @@ input.form--textEntry{
 .entryContainer p {
   padding: 20px;
 }
+
+.button--container {
+  display: flex;
+  justify-content: center;
+}
+
