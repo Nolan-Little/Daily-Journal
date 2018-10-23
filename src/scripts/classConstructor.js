@@ -35,6 +35,7 @@ class formView {
       //do something awesome that makes the world a better place
       console.log(response);
     });
+    form.reset()
   }
 }
 
