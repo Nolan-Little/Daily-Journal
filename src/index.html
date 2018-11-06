@@ -1,56 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/journal.css">
   <link href="https://fonts.googleapis.com/css?family=Kodchasan|Poppins|Titillium+Web" rel="stylesheet">
-  <title>Document</title>
+  <title>Daily Journal</title>
 </head>
+
 <body>
   <h1 class="journal__header">Daily Journal</h1>
 
   <!-- New journal entry form -->
+  <div class="print--div" id="printDiv">
 
-  <form onsubmit="return false" action="" class="journal__form">
-    <fieldset class="journal__form--fields">
-        <legend class="form--legend">New Entry</legend>
-        <div class="date-mood-pair">
-          <label for="journalDate">Date of Entry:</label>
-          <input type="date" name="journalDate" id="journalDate">
-          <label for="journalMood">Mood:</label>
-          <select type="select" name="journalMood" id="journalMood">
-            <option value="">Select a Mood</option>
-            <option value="Happy">Happy</option>
-            <option value="Excited">Excited</option>
-            <option value="Sad">Sad</option>
-            <option value="Anxious">Anxious</option>
-            <option value="Frustrated">Frustrated</option>
-          </select>
-        </div>
-        <div class="form-labelpair">
-          <label for="journalConcepts">Concepts Covered</label>
-          <input class="form--textEntry" type="text" name="journalConcepts" id="journalConcepts">
-        </div>
-        <div class="form-labelpair">
-          <label for="journalEntry">Journal Entry</label>
-          <textarea class="form--textEntry" type="textarea" name="journalEntry" id="journalEntry" placeholder="What's up?"></textarea>
-        </div>
-
-        <div class="button--container">
-          <button  type="submit" class="journal--button" id="journalSubmit">Submit Entry</button>
-          <button  type="button" class="journal--button" id="journalPrint">Print All Entries</button>
-        </div>
-      </fieldset>
-    </form>
-    <div class="print--div" id="printDiv">
-
-    </div>
-    <script src="scripts/getEntries.js"></script>
-    <script src="scripts/classConstructor.js"></script>
-    <script src="scripts/entriesDOM.js"></script>
-    <script src="scripts/printEntries.js"></script>
-    <script src="scripts/journalMain.js"></script>
+  </div>
+  <script src="scripts/createForm.js"></script>
+  <script src="scripts/getEntries.js"></script>
+  <script src="scripts/classConstructor.js"></script>
+  <script src="scripts/entriesDOM.js"></script>
+  <script src="scripts/printEntries.js"></script>
+  <script src="scripts/journalMain.js"></script>
 </body>
+
 </html>

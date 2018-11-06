@@ -19,6 +19,7 @@ const createHTML = {
 
 // capture data from getEntries and print it on click
 let printOnClick = (entryArray) => {
+  printDiv.innerHTML = ""
   entryArray.forEach((entry) => {
     createHTML.printEntry(entry.date, entry.mood, entry.concept, entry.entry)
   })
