@@ -10,7 +10,7 @@ const createHTML = {
   let entryContainer = document.createElement("div");
   entryContainer.className = "entryContainer";
   constructor.constructElement("h3", "date:", date, entryContainer)
-  constructor.constructElement("h3", "mood:", mood, entryContainer)
+  constructor.constructElement("h3", "mood:", mood, entryContainer )
   constructor.constructElement("h4", "Concepts covered:", concept, entryContainer)
   constructor.constructElement("p","", entry, entryContainer)
   printDiv.appendChild(entryContainer);
