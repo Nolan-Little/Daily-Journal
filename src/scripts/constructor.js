@@ -8,3 +8,5 @@ const constructor = {
     appendTo.appendChild(tag);
   }
 }
+
+export default constructor

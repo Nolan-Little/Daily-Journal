@@ -1,9 +1,12 @@
 
 // class constructor
 class formView {
-  constructor() {
-    this.form = $("form")[0]
-    this.form.onsubmit = this.onsubmit
+  set form(formView) {
+    this._form = document.querySelector("form")
+    this._form.onsubmit = this.onsubmit
+  }
+  get form() {
+    return this._form
   }
 
   validateValues(valuesArray) {
@@ -62,4 +65,5 @@ class formView {
   }
 }
 
-let journalForm = new formView();
+let journalForm = new formView
+export default journalForm

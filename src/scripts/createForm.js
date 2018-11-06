@@ -1,16 +1,9 @@
-let createForm = () => {
-  let form = document.createElement("form")
-  form.setAttribute("onsubmit", "return false")
-  form.setAttribute("action", "")
-  form.setAttribute("class", "journal__form")
-  let h1 = document.querySelector(".journal__header")
+let createForm = {
+  form() {
+    let form = $("<form></form>").attr("onsubmit", "return false").attr("action", "").attr("class", "journal__form")
 
-
-  let form = $("<form></form>").attr("onsubmit", "return false").attr("action", "").attr("class", "journal__form")
-  let h1 = $(".journal__header")[0]
-
-  $(form).html(
-    `
+    $(form).html(
+      `
     <fieldset class="journal__form--fields">
       <legend class="form--legend">New Entry</legend>
       <div class="date-mood-pair">
@@ -41,11 +34,9 @@ let createForm = () => {
       </div>
     </fieldset>
   `
-  )
-  return form
+    )
+    return form
+  }
 }
-
-
-$(h1).after(form)
 
 export default createForm

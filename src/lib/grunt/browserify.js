@@ -21,7 +21,7 @@ module.exports = {
       }
   },
   app: {
-      src: ["../scripts/main.js"],
+      src: ["../scripts/journalMain.js"],
       dest: "../../public/dailyJournal.js"
   }
 }
