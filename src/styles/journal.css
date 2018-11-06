@@ -120,3 +120,6 @@ input.form--textEntry{
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}

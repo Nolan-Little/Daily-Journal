@@ -36,4 +36,5 @@ form.innerHTML =
       </div>
     </fieldset>
   `
-h1.after(form);
+h1.after(form)
+
