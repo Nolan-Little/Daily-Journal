@@ -2,20 +2,19 @@
 // in the database.json file and renders them to the page.
 import createFrom from "./createForm"
 
-let moodFilter = document.querySelector("#moodFilter")
-moodFilter.addEventListener("click", (e) => {
-  let entries = document.querySelectorAll(".entryContainer")
+$("#moodFilter").click((e) => {
+  let entries = $(".entryContainer").toArray()
   entries.forEach((entry) => {
     if (entry.childNodes[1].textContent.indexOf(e.target.value) > -1) {
-      entry.classList.remove("hidden")
+      $(entry).removeClass("hidden")
     } else {
-      entry.classList.add("hidden")
+      $(entry).addClass("hidden")
     }
   })
 })
 
-let printButton = document.querySelector("#journalPrint")
-printButton.addEventListener("click", () => {
+
+$("#journalPrint").click(() => {
   entryFetcher.fetchEntries()
     .then((readyToPrint) => {
       printOnClick(readyToPrint)
@@ -23,4 +22,3 @@ printButton.addEventListener("click", () => {
     })
 })
 
-crea

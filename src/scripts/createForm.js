@@ -5,7 +5,11 @@ let createForm = () => {
   form.setAttribute("class", "journal__form")
   let h1 = document.querySelector(".journal__header")
 
-  form.innerHTML =
+
+  let form = $("<form></form>").attr("onsubmit", "return false").attr("action", "").attr("class", "journal__form")
+  let h1 = $(".journal__header")[0]
+
+  $(form).html(
     `
     <fieldset class="journal__form--fields">
       <legend class="form--legend">New Entry</legend>
@@ -37,6 +41,11 @@ let createForm = () => {
       </div>
     </fieldset>
   `
+  )
+  return form
 }
+
+
+$(h1).after(form)
 
 export default createForm

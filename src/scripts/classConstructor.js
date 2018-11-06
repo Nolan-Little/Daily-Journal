@@ -2,7 +2,7 @@
 // class constructor
 class formView {
   constructor() {
-    this.form = document.querySelector("form");
+    this.form = $("form")[0]
     this.form.onsubmit = this.onsubmit
   }
 
