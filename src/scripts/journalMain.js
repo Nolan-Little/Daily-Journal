@@ -1,5 +1,6 @@
 // add event listener that calls previous methods and targets "print all entries button" to print all entries
 // in the database.json file and renders them to the page.
+import createFrom from "./createForm"
 
 let moodFilter = document.querySelector("#moodFilter")
 moodFilter.addEventListener("click", (e) => {
@@ -22,3 +23,4 @@ printButton.addEventListener("click", () => {
     })
 })
 
+crea
