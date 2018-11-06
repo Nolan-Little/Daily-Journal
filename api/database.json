@@ -13,6 +13,20 @@
       "concept": "Posting with fetch.",
       "entry": "I figured out how to use fetch to post! Im pretty stoked about it. I can actually use this as a journal now if I wanted. When you submit this form is stores all of the current values to my JSON file. Print all Entries prints all of the entries currently stored in the JSON file.",
       "id": 2
+    },
+    {
+      "date": "2018-10-23",
+      "mood": "Happy",
+      "concept": "One line, one dream",
+      "entry": "Added a feature to reset form values upon submit!",
+      "id": 3
+    },
+    {
+      "date": "2018-11-01",
+      "mood": "Anxious",
+      "concept": "Everything",
+      "entry": "We have covered so much ground this week. I feel like I'm a bit scattered with the amount of exercises and content to cover. Slowly wading through.",
+      "id": 5
     }
   ]
 }
