@@ -1,69 +1,55 @@
 
 // class constructor
 class formView {
-  set form(formView) {
-    this._form = document.querySelector("form")
+  set form(form) {
+    this._form = document.querySelector(form)
     this._form.onsubmit = this.onsubmit
   }
   get form() {
     return this._form
   }
 
-  validateValues(valuesArray) {
-    if (valuesArray[1] === "1") {
-      alert("Please pick a mood for the entry")
-      // this.addInvalid("entry")
-      return null
+  validateValues(valuesObj) {
+    console.log(valuesObj)
+    if (valuesObj.Date === "" || valuesObj.Concept === "" || valuesObj.Entry === "") {
+      alert("Can't submit entry with blank fields")
+    } else {
+      if (valuesObj.mood === "1") {
+        alert("Please pick a mood for the entry")
+        return null
+      }
+      let conceptRGEX = /[/~`\@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:\<\>/]/g
+      let conceptResult = conceptRGEX.test(valuesObj.concept)
+      if (conceptResult === true) {
+        alert("Please don't use special characters in the concept field")
+        // this.addInvalid("conceptName")
+        return null
+      }
+      let entryRGEX = /[/~`\@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:\<\>/]/g
+      let entryResult = entryRGEX.test(valuesObj.entry)
+      if (entryResult === true) {
+        alert("Please don't use special characters in the entry field")
+        // this.addInvalid("entry")
+        return null
+      }
+      return 1
     }
-    let conceptRGEX = /^[A-Z]{1,25}$/i
-    let conceptResult = conceptRGEX.test(valuesArray[2])
-    if (conceptResult === false) {
-      alert("Please enter a valid concept name")
-      // this.addInvalid("conceptName")
-      return null
-    }
-    let entryRGEX = /^[A-Z]{1,25}$/i
-    let entryResult = entryRGEX.test(valuesArray[3])
-    if (entryResult === false) {
-      alert("Please enter a valid journal entry")
-      // this.addInvalid("entry")
-      return null
-    }
-    return 1
   }
 
   onsubmit(e) {
     e.preventDefault();
+  }
 
-    const { target: form } = e;
-    const { journalDate, journalMood, journalConcepts, journalEntry } = form;
-    const values = [journalDate.value, journalMood.value, journalConcepts.value, journalEntry.value];
-
-    // printEntry(values[0], values[1], values[2], values[3]);
-    if (journalForm.validateValues(values) === 1) {
-      fetch("http://localhost:8088/entries", {
-        method: "post",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        },
-
-        //make sure to serialize your JSON body
-        body: JSON.stringify({
-          date: values[0],
-          mood: values[1],
-          concept: values[2],
-          entry: values[3],
-        })
-      })
-        .then((response) => {
-          //do something awesome that makes the world a better place
-          console.log(response);
-        })
-      form.reset()
-    }
+  getFormValues() {
+    let formValues = {}
+    $.makeArray($(".form__input")).forEach((input) => {
+      let value = input.name.split("l")[1]
+      let normalizedValue = value.toLowerCase()
+      formValues[normalizedValue] = input.value
+    })
+    return formValues
   }
 }
 
-let journalForm = new formView
-export default journalForm
+
+export default formView
