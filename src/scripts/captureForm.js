@@ -1,6 +1,7 @@
 
 // class constructor
 class formView {
+
   set form(form) {
     this._form = document.querySelector(form)
     this._form.onsubmit = this.onsubmit
@@ -10,11 +11,10 @@ class formView {
   }
 
   validateValues(valuesObj) {
-    console.log(valuesObj)
     if (valuesObj.Date === "" || valuesObj.Concept === "" || valuesObj.Entry === "") {
       alert("Can't submit entry with blank fields")
     } else {
-      if (valuesObj.mood === "1") {
+      if (valuesObj.mood === "select") {
         alert("Please pick a mood for the entry")
         return null
       }
@@ -37,7 +37,7 @@ class formView {
   }
 
   onsubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
   }
 
   getFormValues() {
@@ -50,6 +50,5 @@ class formView {
     return formValues
   }
 }
-
 
 export default formView

@@ -2,31 +2,60 @@
   "entries": [
     {
       "date": "10/05/18",
-      "mood": "Excited",
+      "moodId": 2,
       "concept": "Grunt",
       "entry": "Grunt seems pretty slick. Blah, blah, another fetch yadada.",
       "id": 1
     },
     {
       "date": "2018-10-22",
-      "mood": "Excited",
+      "moodId": 2,
       "concept": "Posting with fetch.",
       "entry": "I figured out how to use fetch to post! Im pretty stoked about it. I can actually use this as a journal now if I wanted. When you submit this form is stores all of the current values to my JSON file. Print all Entries prints all of the entries currently stored in the JSON file.",
       "id": 2
     },
     {
       "date": "2018-10-23",
-      "mood": "Happy",
+      "moodId": 1,
       "concept": "One line, one dream",
       "entry": "Added a feature to reset form values upon submit!",
       "id": 3
     },
     {
       "date": "2018-11-01",
-      "mood": "Anxious",
+      "moodId": 4,
       "concept": "Everything",
       "entry": "We have covered so much ground this week. I feel like I'm a bit scattered with the amount of exercises and content to cover. Slowly wading through.",
       "id": 5
+    },
+    {
+      "date": "2018-10-30",
+      "moodId": 1,
+      "concept": "asdjklglajdhg",
+      "entry": "dskhafljkadhfla",
+      "id": 6
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "name": "Happy"
+    },
+    {
+      "id": 2,
+      "name": "Excited"
+    },
+    {
+      "id": 3,
+      "name": "Sad"
+    },
+    {
+      "id": 4,
+      "name": "Anxious"
+    },
+    {
+      "id": 5,
+      "name": "Frustrated"
     }
   ]
 }

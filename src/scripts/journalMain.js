@@ -48,5 +48,3 @@ let mainJournalForm = new formClass
 $(".journal__header")[0].after(form[0])
 mainJournalForm.form = "form"
 
-
-
