@@ -24,7 +24,7 @@ const createHTML = {
     printDiv.innerHTML = ""
     let entries = []
     entryArray.forEach((entry) => {
-      entries.push(createHTML.printEntry(entry.date, entry.mood, entry.concept, entry.entry))
+      entries.push(createHTML.printEntry(entry.date, entry.mood.name, entry.concept, entry.entry))
     })
     return entries
   }

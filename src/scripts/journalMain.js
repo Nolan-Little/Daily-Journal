@@ -17,13 +17,22 @@ $(document).on("click", "#journalPrint", function () {
 })
 
 $(document).on("click", "#moodFilter", function (e) {
-  let entries = $(".entryContainer").toArray()
-  entries.forEach((entry) => {
-    if (entry.childNodes[1].textContent.indexOf(e.target.value) > -1) {
-      $(entry).removeClass("hidden")
-    } else {
-      $(entry).addClass("hidden")
-    }
+  let moodVal = e.target.value
+  entryAPI.fetchMoods().then((response) => {
+    let moodId
+    response.forEach((mood) => {
+      if (moodVal === mood.name) {
+        moodId = mood.id
+      }
+    })
+    return moodId
+  }).then((moodId) => {
+    entryAPI.fetchMoodEntries(moodId)
+      .then((readyToPrint) => {
+        createHTML.printOnClick(readyToPrint)
+        $("#moodFilter").removeClass("hidden")
+        console.log(readyToPrint)
+      })
   })
 })
 
@@ -47,6 +56,4 @@ $(document).on("click", "#journalSubmit", function (e) {
 let mainJournalForm = new formClass
 $(".journal__header")[0].after(form[0])
 mainJournalForm.form = "form"
-
-
 
