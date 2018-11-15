@@ -44,8 +44,11 @@ class formView {
     let formValues = {}
     $.makeArray($(".form__input")).forEach((input) => {
       let value = input.name.split("l")[1]
-      let normalizedValue = value.toLowerCase()
-      formValues[normalizedValue] = input.value
+      if(value === "moodId"){
+        formValues[value] = Number(input.value)
+      }else {
+        formValues[value] = input.value
+      }
     })
     return formValues
   }
